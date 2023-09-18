@@ -3,7 +3,7 @@ define rsyslog::component::action (
   String $target,
   String $confdir,
   String $type,
-  Boolean $dont_linebreak_actions = $rsyslog::dont_linebreak_actions,
+  Boolean $dont_linebreak_actions,
   Hash $config = {},
   String[1] $facility = 'default',
   String[1] $format = '<%= $content %>'

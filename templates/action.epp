@@ -8,6 +8,7 @@ $config
 # <%= $action_name %>
 <% if $facility != "default" and size($config) < 3 or $dont_linebreak_actions { -%>
   <%= sprintf('%-30s action(type="%s" ', $facility, $type) -%>
+  # Hello <%= $dont_linebreak_actions -%>
   <%  if $config { -%>
     <% $config.each |$k, $v| { -%> <%= $k -%>="<%= $v -%>" <% }-%>)
   <%-}%>
